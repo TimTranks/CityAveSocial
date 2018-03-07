@@ -1,1129 +1,986 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
     <head>
-        <title>City Ave Social</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+
         <meta charset="utf-8">
-        <meta name="author" content="Roman Kirichik">
-        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        
-        <!-- Favicons -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="">
+        <meta name="author" content="">
         <link rel="shortcut icon" href="images/favicon.png">
-        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-        
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style-responsive.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/vertical-rhythm.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">  
-        <link rel="stylesheet" href="css/YTPlayer.css">
-        
+
+        <meta property="og:title" content="City Ave Social"/>
+        <meta property="og:description" content="Promotion &amp; Web Design"/>
+        <meta property="og:image" content="http://www.cityavesocial.com/cityavesocialfb.jpg" />
+        <meta property="og:url" content="http://cityavesocial.com"/>
+        <meta name="twitter:card" content="">
+        <meta name="og:site_name" content="City Ave Social">
+        <meta name="twitter:image:alt" content="Promotion &amp; Web Design">
+
+        <title>xDEMO - City Ave Social X</title>
+
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="img/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <style>
+            body.display-n .wrapper {
+                display: none;
+            }
+            
+            body.display-n {
+                display: block!important;
+            }
+            
+            @-webkit-keyframes preload-show-1 {
+                from {
+                    -webkit-transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-show-1 {
+                from {
+                    -webkit-transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-hide-1 {
+                to {
+                    -webkit-transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-hide-1 {
+                to {
+                    -webkit-transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(60deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-cycle-1 {
+                5% {
+                    -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                10%,
+                75% {
+                    -webkit-transform: rotateZ(60deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(60deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                80%,
+                100% {
+                    -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-cycle-1 {
+                5% {
+                    -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                10%,
+                75% {
+                    -webkit-transform: rotateZ(60deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(60deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                80%,
+                100% {
+                    -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(60deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-show-2 {
+                from {
+                    -webkit-transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-show-2 {
+                from {
+                    -webkit-transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-hide-2 {
+                to {
+                    -webkit-transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-hide-2 {
+                to {
+                    -webkit-transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(120deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-cycle-2 {
+                10% {
+                    -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                15%,
+                70% {
+                    -webkit-transform: rotateZ(120deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(120deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                75%,
+                100% {
+                    -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-cycle-2 {
+                10% {
+                    -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                15%,
+                70% {
+                    -webkit-transform: rotateZ(120deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(120deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                75%,
+                100% {
+                    -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(120deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-show-3 {
+                from {
+                    -webkit-transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-show-3 {
+                from {
+                    -webkit-transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-hide-3 {
+                to {
+                    -webkit-transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-hide-3 {
+                to {
+                    -webkit-transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(180deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-cycle-3 {
+                15% {
+                    -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                20%,
+                65% {
+                    -webkit-transform: rotateZ(180deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(180deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                70%,
+                100% {
+                    -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-cycle-3 {
+                15% {
+                    -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                20%,
+                65% {
+                    -webkit-transform: rotateZ(180deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(180deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                70%,
+                100% {
+                    -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(180deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-show-4 {
+                from {
+                    -webkit-transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-show-4 {
+                from {
+                    -webkit-transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-hide-4 {
+                to {
+                    -webkit-transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-hide-4 {
+                to {
+                    -webkit-transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(240deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-cycle-4 {
+                20% {
+                    -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                25%,
+                60% {
+                    -webkit-transform: rotateZ(240deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(240deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                65%,
+                100% {
+                    -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-cycle-4 {
+                20% {
+                    -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                25%,
+                60% {
+                    -webkit-transform: rotateZ(240deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(240deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                65%,
+                100% {
+                    -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(240deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-show-5 {
+                from {
+                    -webkit-transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-show-5 {
+                from {
+                    -webkit-transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-hide-5 {
+                to {
+                    -webkit-transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-hide-5 {
+                to {
+                    -webkit-transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(300deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-cycle-5 {
+                25% {
+                    -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                30%,
+                55% {
+                    -webkit-transform: rotateZ(300deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(300deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                60%,
+                100% {
+                    -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-cycle-5 {
+                25% {
+                    -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                30%,
+                55% {
+                    -webkit-transform: rotateZ(300deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(300deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                60%,
+                100% {
+                    -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(300deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-show-6 {
+                from {
+                    -webkit-transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-show-6 {
+                from {
+                    -webkit-transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-hide-6 {
+                to {
+                    -webkit-transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-hide-6 {
+                to {
+                    -webkit-transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+                    transform: rotateZ(360deg) rotateY(-90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-cycle-6 {
+                30% {
+                    -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                35%,
+                50% {
+                    -webkit-transform: rotateZ(360deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(360deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                55%,
+                100% {
+                    -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @keyframes preload-cycle-6 {
+                30% {
+                    -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+                35%,
+                50% {
+                    -webkit-transform: rotateZ(360deg) rotateY(0) rotateX(0deg);
+                    transform: rotateZ(360deg) rotateY(0) rotateX(0deg);
+                    border-left-color: #222222;
+                }
+                55%,
+                100% {
+                    -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+                    transform: rotateZ(360deg) rotateY(90deg) rotateX(0deg);
+                    border-left-color: #585858;
+                }
+            }
+            
+            @-webkit-keyframes preload-flip {
+                0% {
+                    -webkit-transform: rotateY(0deg) rotateZ(-60deg);
+                    transform: rotateY(0deg) rotateZ(-60deg);
+                }
+                100% {
+                    -webkit-transform: rotateY(360deg) rotateZ(-60deg);
+                    transform: rotateY(360deg) rotateZ(-60deg);
+                }
+            }
+            
+            @keyframes preload-flip {
+                0% {
+                    -webkit-transform: rotateY(0deg) rotateZ(-60deg);
+                    transform: rotateY(0deg) rotateZ(-60deg);
+                }
+                100% {
+                    -webkit-transform: rotateY(360deg) rotateZ(-60deg);
+                    transform: rotateY(360deg) rotateZ(-60deg);
+                }
+            }
+            
+            body {
+                background: #efefef;
+            }
+            
+            .preloader {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-size: 20px;
+                display: block;
+                width: 3.75em;
+                height: 4.25em;
+                margin-left: -1.875em;
+                margin-top: -2.125em;
+                -webkit-transform-origin: center center;
+                -ms-transform-origin: center center;
+                transform-origin: center center;
+                -webkit-transform: rotateY(180deg) rotateZ(-60deg);
+                transform: rotateY(180deg) rotateZ(-60deg);
+            }
+            
+            .preloader .slice {
+                border-top: 1.125em solid transparent;
+                border-right: none;
+                border-bottom: 1em solid transparent;
+                border-left: 1.875em solid #222222;
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                -webkit-transform-origin: left bottom;
+                -ms-transform-origin: left bottom;
+                transform-origin: left bottom;
+                border-radius: 3px 3px 0 0;
+            }
+            
+            .preloader.loading {
+                -webkit-animation: 2s preload-flip steps(2) infinite both;
+                animation: 2s preload-flip steps(2) infinite both;
+            }
+            
+            .preloader.loading .slice:nth-child(1) {
+                -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+                transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+                -webkit-animation: 2s preload-cycle-1 linear infinite both;
+                animation: 2s preload-cycle-1 linear infinite both;
+            }
+            
+            .preloader.loading .slice:nth-child(2) {
+                -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+                transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+                -webkit-animation: 2s preload-cycle-2 linear infinite both;
+                animation: 2s preload-cycle-2 linear infinite both;
+            }
+            
+            .preloader.loading .slice:nth-child(3) {
+                -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+                transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+                -webkit-animation: 2s preload-cycle-3 linear infinite both;
+                animation: 2s preload-cycle-3 linear infinite both;
+            }
+            
+            .preloader.loading .slice:nth-child(4) {
+                -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+                transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+                -webkit-animation: 2s preload-cycle-4 linear infinite both;
+                animation: 2s preload-cycle-4 linear infinite both;
+            }
+            
+            .preloader.loading .slice:nth-child(5) {
+                -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+                transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+                -webkit-animation: 2s preload-cycle-5 linear infinite both;
+                animation: 2s preload-cycle-5 linear infinite both;
+            }
+            
+            .preloader.loading .slice:nth-child(6) {
+                -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+                transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+                -webkit-animation: 2s preload-cycle-6 linear infinite both;
+                animation: 2s preload-cycle-6 linear infinite both;
+            }
+        </style>
+
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css?v3.3.5" rel="stylesheet" type="text/css" title="">
+        <!-- Bootstrap -->
+        <link href="css/animate.css?v1.0.0" rel="stylesheet" type="text/css" title="">
+        <!-- Font Awesome -->
+        <link href="css/font-awesome.css?v4.4.0" rel="stylesheet" type="text/css" title="">
+        <!-- Font Et-line -->
+        <link href="css/et-line.css?v1.0.0" rel="stylesheet" type="text/css" title="">
+        <!-- Font Simple line -->
+        <link href="css/simple-line-icons.css?v=1.0.0" rel="stylesheet" type="text/css" title="">
+        <!-- Font Elegant -->
+        <link href="css/elegant-font.css?v1.0.0" rel="stylesheet" type="text/css" title="">
+        <!-- Owl carousel default style -->
+        <link href="css/owl.carousel.css?v2.0.0" rel="stylesheet" type="text/css" title="">
+        <!-- Magnific Popup default style -->
+        <link href="css/magnific-popup.css?v=1.0.0" rel="stylesheet" type="text/css" title="">
+        <!-- Main css file -->
+        <link href="css/style.css?v=1.0.0" rel="stylesheet" type="text/css" title=""> 
     </head>
-    <body class="appear-animate">
-        
-        <!-- Page Loader -->        
-        <div class="page-loader">
-            <div class="loader">Loading..</div>
-        </div>
-        <!-- End Page Loader -->
-        
-        <!-- Page Wrap -->
-        <div class="page" id="top">
-            
-            <!-- Home Section -->
-            <section class="home-section bg-dark bg-pattern-over" id="home">
-                <div class="js-height-full container">
-                    
-                    <!-- Video BG Init -->
-                    <div class="player" data-property="{videoURL: 'https://www.youtube.com/watch?v=1XT9kOZA_10',containment:'#home',autoPlay:true, showControls:true, showYTLogo: false, mute:false, startAt:0, opacity:1}">
-                    </div>
-                     <!-- End Video BG Init -->
-                    
-                    <!-- Hero Content -->
-                    <div class="home-content">
-                        <div class="home-text">
-                            
-                            <h1 class="hs-line-8 no-transp font-alt mb-50 mb-xs-30">
-                                THE XCLUSIVE PARTY BUS IS BACK
-                            </h1>
-                            <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.5s">
-                        <a href="#"><img src="canew/bus3.jpg" width="300" height="300" alt="" /></a>
-                    </div>
-                            
-                            <h2 class="hs-line-12 font-alt mb-50 mb-xs-30">
-                                <!--BIG CAPTION GOES HERE-->
-                            </h2>
-                            
-                            <div class="local-scroll">
-                                <a href="https://www.yourpartyhub.com/event/xclusivepartybus2016" target="_blank" class="btn btn-mod btn-border-w btn-medium btn-round hidden-xs">More Info</a>
-                                <span class="hidden-xs">&nbsp;</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <!-- End Hero Content -->
-                    
-                </div>
-            </section>
-            <!-- End Home Section -->
-            
-            
-            <!-- Navigation panel -->
-            <nav class="main-nav dark transparent stick-fixed">
-                <div class="full-wrapper relative clearfix">
-                    <!-- Logo ( * your text or image into link tag *) -->
-                    <div class="nav-logo-wrap local-scroll">
-                        <a href="#top" class="logo">
-                            <img src="canew/logo cityave.png" alt="" />
-                        </a>
-                    </div>
-                    <div class="mobile-nav">
-                        <i class="fa fa-bars"></i>
-                    </div>
-                    <!-- Main Menu --><!--START-->
-                    <div class="inner-nav desktop-nav">
-                        <ul class="clearlist scroll-nav local-scroll">
-                            <li class="active">
-                                <a href="#promo">Promotion</a></li>
-                                 <li><a href="#design">Design</a></li>
-                            <li><a href="letstalk">Event Staff</a></li>
-                            <li><a href="#Home">Xclusive</a></li>
-                            <li><a href="#letstalk">Contact Us</a></li>
-                            <li><li><a href="#">Subscribe</a></li>
-                            
 
-                            <li><a href="aMedia.hml" class="mn-has-sub"> Affiliates <i class="fa fa-angle-down"></i></a>
-                                <!-- Sub Multilevel -->
-                                <ul class="mn-sub mn-has-multi">
-                    
-                                    <li class="mn-sub-multi">
-                                        <ul>
-                                            <li>
-                                                <a href="elements-features.html"><i class="fa fa-th-large fa-sm"></i> YPH Philly </a>
-                                            </li>
-                                            <li>
-                                                <a href="elements-icons-fe.html"><i class="fa fa-heart fa-sm"></i> YourPartyHub </a></a>
-                                            </li>
-                                            <li>
-                                                <a href="elements-grid.html"><i class="fa fa-th fa-sm"></i> TRVNKSdj <span class="label-new round">Soon</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="elements-grid.html"><i class="fa fa-th fa-sm"></i> DJ 2ELVN <span class="label-new round">Soon</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="elements-grid.html"><i class="fa fa-th fa-sm"></i> CTC Training <span class="label-new round">Soon</span></a>
-                                            </li>
-                                        </ul></li>
-                                        
+    <body class="load display-h">
+        <div class="wrapper">
+            <div class="navigation default light navbar-fixed-top">
+                <nav>
+                    <a class="navbar-brand" href="index.html"> <img class="logo-img" src="tfx/logo/cityavelogo-w.png?v=1.0.0" alt="CityAveSocial"> </a>
+                    <button type="button" class="navbar-toggle collapsed"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="title">Menu</span> </button>
+                    <ul class="clearfix" style="margin-top: 25px;">
+                        
+                        <li><a href="#aboutus" class="scrollTo">ABOUT US</a></li>
+                        <li><a href="#promotion" class="scrollTo">PROMOTION</a></li>
+                        <li><a href="#contactus" class="scrollTo">CONTACT US</a></li>
+                        <!-- 
+                        <li><a href="https://instagram.com/cityavesocial" target="_blank" class="scrollTo">EVENTS</a></li>
+                        <li><a>CAMPAIGNS</a></li>
+                        <li><a href="#websites" class="scrollTo">DESIGN</a></li>
+                        <li><a>MARKETING</a></li>
+                        
+
+                        <li class="divider-vertical hidden-xs"></li>
+
+                            <li class="has-sub large left"> <a href="#" class="page-load" data-title="CITYAVESOCIAL | My Account"><i aria-hidden="true" class="et-icon-gears"></i><i class="visible-xs-inline-block">About</i></a>
+                                <ul class="sub">
+                                    <li class="header-account-avatar">
+                                        <a href="#" title=""> <img width="100" height="100" src="tfx/logo/affiliates.png" alt="" class="img-circle"> </a>
                                     </li>
-                                    </li><
-                                
-            
-                                </ul>
-                                <!-- End Sub Multilevel -->
-                                
-                            </li>    </li>
+                                    <li class="header-account-username">
+                                        <h4 class="mt0 mb0">SETTINGS</h4> </li>
+                                    <li><a href="#" class="page-load">PAYMENTS</a></li>
+                                    <li><a href="#" class="page-load">AFFILIATES</a></li>
+                                    <li><a href="#" target="_blank">CONTACT</a></li>                             
+                                    </ul>
                             </li>
-                    </div>
-                </div>
-            </nav>
-            <!-- End Navigation panel -->
 
-           
+                        -->
 
-              <!-- Services Section -->
-            <section class="page-section bg-dark-lighter" data-background="#">
-    <div class="container relative">
-                    
-                    <h2 class="section-title font-alt mb-70 mb-sm-40">
-                        What We Do
-                    </h2>
-                    
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs tpl-alt-tabs font-alt pt-30 pt-sm-0 pb-30 pb-sm-0">
-                        <li class="active">
-                            <a href="#service-branding" data-toggle="tab">
-                                
-                                <div class="alt-tabs-icon">
-                                    <span class="icon-strategy"></span>
-                                </div>
-                                
-                                Branding
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#service-web-design" data-toggle="tab">
-                                
-                                <div class="alt-tabs-icon">
-                                    <span class="icon-desktop"></span>
-                                </div>
-                                
-                                Web Design
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#service-graphic" data-toggle="tab">
-                                
-                                <div class="alt-tabs-icon">
-                                    <span class="icon-tools"></span>
-                                </div>
-                                
-                                Graphic Design
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#service-development" data-toggle="tab">
-                                
-                                <div class="alt-tabs-icon">
-                                    <span class="icon-gears"></span>
-                                </div>
-                                
-                                Development
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#service-photography" data-toggle="tab">
-                                
-                                <div class="alt-tabs-icon">
-                                    <span class="icon-camera"></span>
-                                </div>
-                                
-                                Photography
-                            </a>
-                        </li>
+
+                                </ul>
+                            </li>
                     </ul>
-                    <!-- End Nav tabs -->
-                    
-                    <!-- Tab panes -->
-                    <div class="tab-content tpl-tabs-cont">
-                        
-                        <!-- Service Item -->
-                        <div class="tab-pane fade in active" id="service-branding">
-                            
-                            <div class="section-text">
-                                <div class="row">
-                                    <div class="col-md-4 mb-md-40 mb-xs-30">
-                                        <blockquote class="mb-0">
-                                            <p>
-                                                A&nbsp;brand for a&nbsp;company is&nbsp;like a&nbsp;reputation 
-                                                for a&nbsp;person. You earn reputation by&nbsp;trying to&nbsp;do&nbsp;hard 
-                                                things well.
-                                            </p>
-                                            <footer>
-                                                Tim, City Ave Social
-                                            </footer>
-                                        </blockquote>
+                </nav>
+            </div>
+
+            <!-- HEADER -->
+
+           <header id="home">
+                <!-- Video BG Init -->
+                <div class="video-bg" data-background="tfx/bg/philly.jpg?v=1.0.0" data-overlay-color="#000000" data-overlay-opacity=".7"></div>
+                <!-- End Video BG Init -->
+                <div id="slides" class="home-slider video">
+                    <div class="slides-container">
+                        <div class="slide">
+                            <div class="content">
+                                <div class="display-tc">
+                                    <div class="text-center">
+                                        <div class="large-header white text-uppercase underline-large display-ib mb-xs5 mb-md15">CITY AVE SOCIAL</div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
-                                        Maecenas  volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum 
-                                        volutpat nibh, accumsan purus. Lorem ipsum dolor sit semper amet, consectetur adipiscing elit. 
-                                        In maximus ligula metus pellentesque mattis.  
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
-                                        Donec vel ultricies purus. Nam dictum sem, ipsum aliquam . Etiam sit amet fringilla lacus. 
-                                        Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Integer lectus. 
-                                        Praesent sed nisi eleifend, fermentum orci amet, iaculis libero. 
-                                    </div>
+                                    <div class="h5 white text-uppercase text-center mt-md30 mb-md20 mb-md40 fadeInUp wow" data-wow-delay="1s">Let's Get You Promoted</div>
                                 </div>
                             </div>
-                            
                         </div>
-                        <!-- End Service Item -->
-                        
-                        <!-- Service Item -->
-                        <div class="tab-pane fade" id="service-web-design">
-                            
-                            <div class="section-text">
-                                <div class="row">
-                                    <div class="col-md-4 mb-md-40 mb-xs-30">
-                                        <blockquote class="mb-0">
-                                            <p>
-                                                It&nbsp;doesn&rsquo;t matter how many times&nbsp;I have to&nbsp;click, as&nbsp;long 
-                                                as&nbsp;each click is&nbsp;a&nbsp;mindless, unambiguous choice.
-                                            </p>
-                                            <footer>
-                                                Steve Krug
-                                            </footer>
-                                        </blockquote>
+                        <div class="slide">
+                            <div class="content">
+                                <div class="display-tc">
+                                    <div class="text-center fadeInUp wow" data-wow-delay=".45s">
+                                        <div class="h5 white text-uppercase underline-large display-ib mb-xs5 mb-md15">City Ave Social</div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
-                                        Cras mi tortor, laoreet id ornare et, accumsan non magna. Maecenas vulputate accumsan velit. 
-                                        Curabitur a nulla ex. Nam a tincidunt ante. Vitae gravida turpis. Vestibulum varius
-                                        nulla non nulla scelerisque tristique.
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
-                                        Mauris id viverra augue, eu porttitor diam. Praesent faucibus est a interdum elementum. 
-                                        Nam varius at ipsum id dignissim. Nam a tincidunt ante lorem. Pellentesque suscipit ante
-                                        at ullamcorper pulvinar neque porttitor. 
-                                    </div>
+                                    <h1 class="white text-uppercase text-center mb-md20 mb-md40 fadeInUp wow" data-wow-delay=".55s">Promo Packages Available </h1>
+                                    <div class="text-center"> <a href="#promotion" class="btn btn-primary btn-inverted scrollTo fadeInUp wow" data-wow-delay=".65s">See Promo</a> </div>
                                 </div>
                             </div>
-                            
                         </div>
-                        <!-- End Service Item -->
-                        
-                        <!-- Service Item -->
-                        <div class="tab-pane fade" id="service-graphic">
-                            
-                            <div class="section-text">
-                                <div class="row">
-                                    <div class="col-md-4 mb-md-40 mb-xs-30">
-                                        <blockquote class="mb-0">
-                                            <p>
-                                                Never fall in&nbsp;love with an&nbsp;idea. They&rsquo;re whores. If&nbsp;the one you&rsquo;re with isn&rsquo;t doing the job, there&rsquo;s always another.
-                                            </p>
-                                            <footer>
-                                                Chip Kidd
-                                            </footer>
-                                        </blockquote>
+                        <div class="slide">
+                            <div class="content">
+                                <div class="display-tc">
+                                    <div class="text-center fadeInUp wow" data-wow-delay=".45s">
+                                        <div class="h5 white text-uppercase underline-large display-ib mb-xs5 mb-md15">Custom Dev &amp; Design</div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
-                                        Lorem ipsum dolor sit semper amet, consectetur adipiscing elit. In maximus ligula metus pellentesque
-                                        mattis. Donec vel ultricies purus. Nam dictum sem, ipsum aliquam . Praesent sed nisi eleifend, 
-                                        fermentum orci amet, iaculis libero. 
+                                    <div class="container fadeInUp wow" data-wow-delay=".55s">
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+                                                <p class="white text-center mb-md20 mb-md40 mt15">Are you looking for creative services to aide with promo?<br/>
+                                                Contact us for more details about custom dev and design for your project or event.</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
-                                         
-                                        Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Integer lectus. Etiam sit amet 
-                                        fringilla lacus. Maecenas  volutpat, diam enim sagittis quam, id porta quam. Sed id&nbsp;dolor 
-                                        consectetur fermentum volutpat nibh, accumsan purus. 
-                                    </div>
+                                    <div class="text-center"> <a href="#promotion" class="btn btn-primary btn-inverted scrollTo fadeInUp wow" data-wow-delay=".75s">See Promo</a> <a href="#contactus" class="btn btn-default btn-inverted scrollTo fadeInUp wow"
+                                        data-wow-delay=".85s">Contact Us</a> </div>
                                 </div>
                             </div>
-                            
                         </div>
-                        <!-- End Service Item -->
-                        
-                        <!-- Service Item -->
-                        <div class="tab-pane fade" id="service-development">
-                            
-                            <div class="section-text">
-                                <div class="row">
-                                    <div class="col-md-4 mb-md-40 mb-xs-30">
-                                        <blockquote class="mb-0">
-                                            <p>
-                                                All that is&nbsp;valuable in&nbsp;human society depends upon the opportunity for development accorded the individual.
-                                            </p>
-                                            <footer>
-                                                Albert Einstein
-                                            </footer>
-                                        </blockquote>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
-                                        Fusce hendrerit vitae nunc id gravida. Donec euismod quis ante at mattis. Mauris dictum ante sit 
-                                        amet enim interdum semper. Vestibulum odio justo, faucibus et dictum eu, malesuada nec neque.
-                                        Maecenas  volutpat, diam enim sagittis. 
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
-                                        Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Sed id dolor consectetur fermentum 
-                                        volutpat nibh, accumsan purus. Lorem ipsum dolor sit semper amet, consectetur adipiscing elit. 
-                                        Inmed maximus ligula metus pellentesque.
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <!-- End Service Item -->
-                        
-                        <!-- Service Item -->
-                        <div class="tab-pane fade" id="service-photography">
-                            
-                            <div class="section-text">
-                                <div class="row">
-                                    <div class="col-md-4 mb-md-40 mb-xs-30">
-                                        <blockquote class="mb-0">
-                                            <p>
-                                                Photography is&nbsp;the simplest thing in&nbsp;the world, but it&nbsp;is&nbsp;incredibly 
-                                                complicated to&nbsp;make it&nbsp;really work.
-                                            </p>
-                                            <footer>
-                                                Martin Parr
-                                            </footer>
-                                        </blockquote>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
-                                        Donec vel ultricies purus. Nam dictum sem, ipsum aliquam . Etiam sit amet fringilla lacus. 
-                                        Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Integer lectus. 
-                                        Praesent sed nisi eleifend, fermentum orci amet, iaculis libero. 
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
-                                        Maecenas  volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum 
-                                        volutpat nibh, accumsan purus. Lorem ipsum dolor sit semper amet, consectetur adipiscing elit. 
-                                        In maximus ligula metus pellentesque mattis. 
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <!-- End Service Item -->
-                        
                     </div>
-                    <!-- End Tab panes -->
-                    
+                    <nav class="slides-navigation"> <a href="#" class="next"><i class="fa fa-angle-right"></i></a> <a href="#" class="prev"><i class="fa fa-angle-left"></i></a> </nav>
                 </div>
-            </section>
-            <!-- End Services Section -->
-
-             <!-- About Section -->
-
-             <!-- Divider -->
-            <hr class="mt-0 mb-50 "/>
-             <!-- End Divider -->
-            
-                    <div class="section-text mb-50 mb-sm-20">
-                       <!-- Head Section -->
-            <section class="small-section bg-white" id="promo">
-                <div class="relative container align-left" >
-                    
-                    <div class="row">
-                        
-                        <div class="col-md-8">
-                            <h1 class="hs-line-11 font-alt mb-20 mb-xs-0">Promotion</h1>
-                            <div class="hs-line-4 font-alt black">
-                                We take street promotion and make it digital.
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4 mt-30">
-                            <div class="mod-breadcrumbs font-alt align-right">
-                                <span>Ask Us About Our</span><a href="#letstalk"> Custom Packages</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
+                <div class="scroll-btn-wrapper">
+                    <a href="#about-us" class="scroll-down scrollTo"><img class="scroll-down-img" src="img/mouse.png?v=1.0.0" alt="">Scroll Down</a>
                 </div>
-            </section>
-            <!-- End Head Section -->
-                            </div>
-                            
-                           
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        
-                        <!-- Team item -->
-                        <div class="col-sm-4 mb-xs-30 wow fadeInUp">
-                            <div class="team-item">
-                                
-                                <div class="team-item-image">
-                                    
-                                    <img src="canew/phonepop1.png" alt="" />
-                                    
-                                    <div class="team-item-detail">
-                                        
-                                        <h4 class="font-alt normal">1-Day Post</h4>
-                                        
-                                        <p>
-                                            Your Event Posted Today. 
-                                        </p>
-                                        
-                                        <div class="team-social-links">
-                                            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                
-                                <div class="team-item-descr font-alt">
-                                    
-                                    <div class="team-item-name">
-                                        1-Day Post 
-                                    </div>
-                                    
-                                    <div class="team-item-role">
-                                        $3
-                                    </div>
-                                    
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <!-- End Team item -->
-                        
-                        <!-- Team item -->
-                        <div class="col-sm-4 mb-xs-30 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="team-item">
-                                
-                                <div class="team-item-image">
-                                    
-                                    <img src="canew/phonepop1.png" alt="" />
-                                    
-                                    <div class="team-item-detail">
-                                        
-                                        <h4 class="font-alt normal">5-Day Post</h4>
-                                        
-                                        <p>Your Event Posted 2Xs A Day.<br />Events and Ticket Sales.
-                                        </p>
-                                        
-                                        <div class="team-social-links">
-                                            
-                                            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-                                            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                
-                                <div class="team-item-descr font-alt">
-                                    
-                                    <div class="team-item-name">
-                                        5-Day Post
-                                    </div>
-                                    
-                                    <div class="team-item-role">
-                                        $12
-                                    </div>
-                                    
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <!-- End Team item -->
-                        
-                        <!-- Team item -->
-                        <div class="col-sm-4 mb-xs-30 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="team-item">
-                                
-                                <div class="team-item-image">
-                                    
-                                    <img src="canew/phonepop1.png" alt="" />
-                                    
-                                    <div class="team-item-detail">
-                                        
-                                        <h4 class="font-alt normal">20-Day</h4>
-                                        
-                                        <p>
-                                            You Event Posted 2Xs A Day.<br />Events and Ticket Sales> 
-                                        </p>
-                                        
-                                        <div class="team-social-links">
-                                            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                                            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-                                            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                
-                                <div class="team-item-descr font-alt">
-                                    
-                                    <div class="team-item-name">
-                                        20-Day
-                                    </div>
-                                    
-                                    <div class="team-item-role">
-                                        $38
-                                    </div>
-                                    
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <!-- End Team item -->
-                        
-                    </div>
-                    
-                    
-                </div>
-            </section>
-            <!-- End About Section -->
+            </header>
+
+            <!-- END HEADER -->
 
 
+            <!-- ABOUS US / SECTION TAB -->
+            <div id="aboutus" class="section-header" data-background="tfx/bg/phillyblue.jpg?v=1.0.0" data-overlay-color="#191919" data-overlay-opacity="0.95" style="background-image: url(http://template.brainwave.scientecraft.com/img/content/section-background/about-us-header.jpg?v=1.0.0); z-index: 0;">
+            <h2 class="text-uppercase">About Us</h2> 
+            <div class="overlay" style="background-color: #191919; opacity: 0.95"></div></div>
+            <!-- END SECTION TABS -->
 
-            
-            
-          
 
+            <!-- GRAPHIC DESIGN -->
 
-            <!-- Contact Section -->
-            <section class="page-section" id="contact">
-                <div class="container relative">
-                    
-                    <h2 class="section-title font-alt mb-70 mb-sm-40">
-                        Question About Promotion? Email Us
-                    </h2>
-                    
-                
-                    
-                    <!-- Contact Form -->                            
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            
-                            <form class="form contact-form" id="contact_form" action="contact_me_smtp.php">
-                                <div class="clearfix">
-                                    
-                                    <div class="cf-left-col">
-                                        
-                                        <!-- Name -->
-                                        <div class="form-group">
-                                            <input type="text" name="name" id="name" class="input-md round form-control" placeholder="Name" pattern=".{3,100}" required>
-                                        </div>
-                                        
-                                        <!-- Email -->
-                                        <div class="form-group">
-                                            <input type="email" name="email" id="email" class="input-md round form-control" placeholder="Email" pattern=".{5,100}" required>
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                    <div class="cf-right-col">
-                                        
-                                        <!-- Message -->
-                                        <div class="form-group">                                            
-                                            <textarea name="message" id="message" class="input-md round form-control" style="height: 84px;" placeholder="Message"></textarea>
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="clearfix">
-                                    
-                                    <div class="cf-left-col">
-                                        
-                                        <!-- Inform Tip -->                                        
-                                        <div class="form-tip pt-20">
-                                            <i class="fa fa-info-circle"></i> All the fields are required
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                    <div class="cf-right-col">
-                                        
-                                        <!-- Send Button -->
-                                        <div class="align-right pt-10">
-                                            <button class="submit_btn btn btn-mod btn-medium btn-round" id="submit_btn">Submit Message</button>
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                
-                                
-                                
-                                <div id="result"></div>
-                            </form>
-                            
-                        </div>
-                    </div>
-                    <!-- End Contact Form -->
-                    
-                </div>
-            </section>
-            <!-- End Contact Section -->
-
-              <!-- Divider -->
-            <hr class="mt-25 mb-0 "/>
-             <!-- End Divider -->
-            
-            <!-- Section -->
-            <section class="page-section bg-scroll bg-gray" id="design">
-    <div class="container relative">
-
-                    
-                    <div class="row mb-70 mb-xs-40">
-                        <div class="col-md-8 col-md-offset-2">
-                            <div class="section-text align-center">
-                                <h3 class="font-alt text-rotate">Graphic Design, Web Design, Clean Design, Urban Design, Professional Design, Custom Design, Creative Design, Your Design </h3></<br />
-                                What kind of design are you looking for? We have our most popular options listed here.<br /> Contact us for custom orders
-                            </div>
-                        </div>
-                    </div>
-                    
-                        <!-- Pricing row -->
-                        <div class="row multi-columns-row">
-                            
-                            <!-- Pricing Item -->
-                            <div class="col-sm-4 col-md-4 col-lg-4">
-                                <div class="pricing-item">
-                                    <div class="pricing-item-inner">
-                                        <div class="pricing-wrap">
-                                            
-                                            <!-- Icon (Simple-line-icons) -->
-                                            <div class="pricing-icon">
-                                                <i class="fa fa-font"></i>
-                                            </div>
-                                            
-                                            <!-- Pricing Title -->
-                                            <div class="pricing-title">
-                                                Info gfx
-                                            </div>
-                                            
-                                            <!-- Pricing Features -->
-                                            <div class="pricing-features font-alt">
-                                                <ul class="sf-list pr-list">
-                                                    <li>Text Design</li>
-                                                    <li>File Storage</li>
-                                                    <li>Support</li>
-                                                    <li>&mdash;</li>
-                                                </ul>
-                                            </div>
-                                            
-                                            
-                                            
-                                            <div class="pricing-num">
-                                                <sup>$</sup>35
-                                            </div>
-                                            
-                                            <div class="pr-per">
-                                                and up
-                                            </div>                                          
-                                            
-                                            <!-- Button -->                                         
-                                            <div class="pr-button">
-                                                <a href="#letstalk" class="btn btn-mod">Interested</a>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Pricing Item -->
-                            
-                            <!-- Pricing Item -->
-                            <div class="col-sm-4 col-md-4 col-lg-4">
-                                <div class="pricing-item main">
-                                    <div class="pricing-item-inner">
-                                        <div class="pricing-wrap">
-                                            
-                                            <!-- Icon (Simple-line-icons) -->
-                                            <div class="pricing-icon">
-                                                <i class="fa fa-picture-o"></i>
-                                            </div>
-                                            
-                                            <!-- Pricing Title -->
-                                            <div class="pricing-title">
-                                                Premium GFX
-                                            </div>
-                                            
-                                            <!-- Pricing Features -->
-                                            <div class="pricing-features font-alt">
-                                                <ul class="sf-list pr-list">
-                                                    <li>Typography Design</li>
-                                                    <li>Photo Manipulation</li>
-                                                    <li>File Storage</li>
-                                                    <li>Support</li>
-                                                </ul>
-                                            </div>
-                                            
-                                            
-                                            
-                                            <div class="pricing-num">
-                                                <sup>$</sup>50
-                                            </div>
-                                            
-                                            <div class="pr-per">
-                                                and up
-                                            </div>
-                                            
-                                            
-                                            <!-- Button -->                                         
-                                            <div class="pr-button">
-                                                <a href="#letstalk" class="btn btn-mod">Try it out</a>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Pricing Item -->
-                            
-                            <!-- Pricing Item -->
-                            <div class="col-sm-4 col-md-4 col-lg-4">
-                                <div class="pricing-item">
-                                    <div class="pricing-item-inner">
-                                        <div class="pricing-wrap">
-                                            
-                                            <!-- Icon (Simple-line-icons) -->
-                                            <div class="pricing-icon">
-                                                <i class="fa fa-paint-brush"></i>
-                                            </div>
-                                            
-                                            <!-- Pricing Title -->
-                                            <div class="pricing-title">
-                                                Logos
-                                            </div>
-                                            
-                                            <!-- Pricing Features -->
-                                            <div class="pricing-features font-alt">
-                                                <ul class="sf-list pr-list">
-                                                    <li>Translative Design</li>
-                                                    <li>300 dpi &#43;</li>
-                                                    <li>Vector &#43; Raster Files</li>
-                                                    <li>Support</li>
-                                                </ul>
-                                            </div>
-                                            
-                                            
-                                            
-                                            <div class="pricing-num">
-                                                <sup>$</sup>125
-                                            </div>
-                                            
-                                            <div class="pr-per">
-                                                and up
-                                            </div>
-                                            
-                                            
-                                            <!-- Button -->                                         
-                                            <div class="pr-button">
-                                                <a href="#letstalk" class="btn btn-mod">Email Us</a>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Pricing Item -->
-                            
-                        </div>
-                        <!-- End Pricing row -->
-                    
-                </div>
-            </section>
-            <!-- End Section -->
-
-             <!-- Web Design -->
-
-             <section class="page-section pt-0 pb-0 banner-section bg-dark" data-background="bg-blue.png">
-                <div class="container relative">
-                    
-                    <div class="row">
-                        
-                        <div class="col-sm-6">
-                            
-                            <div class="mt-140 mt-lg-80 mb-140 mb-lg-80">
-                                <div class="banner-content">
-                                    <h3 class="banner-heading font-alt">Web Design </h3>
-                                    <div class="banner-decription">
-                                        We specialize in developing social pages for artists, events, &amp; products.<br />
-                                        Let's talk about developing for you.
-                                    </div>
-                                    <div class="local-scroll">
-                                        <a href="#letstalk" class="btn btn-mod btn-w btn-medium btn-round">Let&rsquo;s talk</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="col-sm-6 banner-image wow fadeInUp" data-wow-duration="1.2s">
-                            <img src="images/promo-1.png" alt="" />
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-            </section>
-
-            
-            
-            <!-- Testimonials Section -->
-            <section class="page-section bg-dark bg-dark-alfa-90 fullwidth-slider" data-background="canew/bg-citygray.jpg">
-                
-                <!-- Slide Item -->
-                <div>
-                    <div class="container relative">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 align-center">
-                                <!-- Section Icon -->
-                                <div class="section-icon">
-                                    <span class="icon-quote"></span>
-                                </div>
-                                <!-- Section Title --><h3 class="small-title font-alt">What people say?</h3>
-                                <blockquote class="testimonial white">
-                                    <p>
-                                        I love these guys! They do great work...<br /> And really work with you!
-                                    </p>
-                                    <footer class="testimonial-author">
-                                        Jessica
-                                    </footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Slide Item -->
-                
-                <!-- Slide Item -->
-                <div>
-                    <div class="container relative">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 align-center">
-                                <!-- Section Icon -->
-                                <div class="section-icon">
-                                    <span class="icon-quote"></span>
-                                </div>
-                                <!-- Section Title --><h3 class="small-title font-alt">That's What She Said</h3>
-                                <blockquote class="testimonial white">
-                                    <p>
-                                        I've been working with Tim &amp; Nate for so long,<br />
-                                        I don't know what I would do without them.
-                                    </p>
-                                    <footer class="testimonial-author">
-                                        Lamika Jenkins, Madam Me, LLC.
-                                    </footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Slide Item -->
-                
-                <!-- Slide Item -->
-                <div>
-                    <div class="container relative">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 align-center">
-                                <!-- Section Icon -->
-                                <div class="section-icon">
-                                    <span class="icon-quote"></span>
-                                </div>
-                                <!-- Section Title --><h3 class="small-title font-alt">Real Reviews</h3>
-                                <blockquote class="testimonial white">
-                                    <p>
-                                        The promotion is cray with these guys.<br />They definitely got the gram on lock!
-                                    </p>
-                                    <footer class="testimonial-author">
-                                        Sonny The Host
-                                    </footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Slide Item -->
-                
-            </section>
-            <!-- End Testimonials Section -->
-
-            <!-- Contact Section -->
-
-            <section class="page-section" id="letstalk">
-
-            <div class="row mb-70 mb-xs-40">
-                        <div class="col-md-8 col-md-offset-2">
-                            <div class="section-text align-center">
-                                <h3 class="font-alt">Let's Talk</h3></<br />
-                                <p>Call us anytime of day. Text us anytime of night.<br /> Send us an email, and we'll get right back to you.</p>
-                            </div>
-                        </div>
-                
-                    
-                    <div class="row mb-60 mb-xs-40">
-                        
-                        <div class="col-md-8 col-md-offset-2">
-                            <div class="row">
-                                
-                                <!-- Phone -->
-                                <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
-                                    <div class="contact-item">
-                                        <div class="ci-icon">
-                                            <i class="fa fa-phone"></i>
-                                        </div>
-                                        <div class="ci-title font-alt">
-                                            Promotion
-                                        </div>
-                                        <div class="ci-text">
-                                            (215) 555-1212
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Phone -->
-                                
-                                <!-- Address -->
-                                <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
-                                    <div class="contact-item">
-                                        <div class="ci-icon">
-                                            <i class="fa fa-map-marker"></i>
-                                        </div>
-                                        <div class="ci-title font-alt">
-                                            Design
-                                        </div>
-                                        <div class="ci-text">
-                                            (980) 285-7015
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Address -->
-                                
-                                <!-- Email -->
-                                <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
-                                    <div class="contact-item">
-                                        <div class="ci-icon">
-                                            <i class="fa fa-envelope"></i>
-                                        </div>
-                                        <div class="ci-title font-alt">
-                                            Other 
-                                        </div>
-                                        <div class="ci-text">
-                                            (609) 555-1212
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Email -->
-                                
-                            </div>
-                        </div>
-                        
-                    </div>
-                    </div>
-                    
-                    <!-- Contact Form -->  
-
-                    
-
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            
-                            <form class="form contact-form" id="contact_form">
-                                <div class="clearfix">
-                                    
-                                    <div class="cf-left-col">
-                                        
-                                        <!-- Name -->
-                                        <div class="form-group">
-                                            <input type="text" name="name" id="name" class="input-md round form-control" placeholder="Name" pattern=".{3,100}" required>
-                                        </div>
-                                        
-                                        <!-- Email -->
-                                        <div class="form-group">
-                                            <input type="email" name="email" id="email" class="input-md round form-control" placeholder="Email" pattern=".{5,100}" required>
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                    <div class="cf-right-col">
-                                        
-                                        <!-- Message -->
-                                        <div class="form-group">                                            
-                                            <textarea name="message" id="message" class="input-md round form-control" style="height: 84px;" placeholder="Message"></textarea>
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="clearfix">
-                                    
-                                    <div class="cf-left-col">
-                                        
-                                        <!-- Inform Tip -->                                        
-                                        <div class="form-tip pt-20">
-                                            <i class="fa fa-info-circle"></i> All the fields are required
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                    <div class="cf-right-col">
-                                        
-                                        <!-- Send Button -->
-                                        <div class="align-right pt-10">
-                                            <button class="submit_btn btn btn-mod btn-medium btn-round" id="submit_btn">Email us</button>
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                
-                                
-                                
-                                <div id="result"></div>
-                            </form>
-                            
-                        </div>
-                    </div></div>
-
-                    </section>
-                    <!-- End Contact Form -->
-                    
-            
-            
-            
-            
-            <!-- Footer -->
-            <footer class="page-sectionX bg-dark footer pb-60">
+            <div class="page-section" data-background-color="#f4f4f4" id="graphicdesign">
                 <div class="container">
-                    
-                    <!-- Footer Logo -->
-                    <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="5s">
-                        <a href="#top"><img src="canew/cityavesocialv.png" width="200" height="200" alt="" /></a>
-                    </div>
-                    <!-- End Footer Logo -->
-                    
-                    
-                    
-                    <!-- Footer Text -->
-                    <div class="footer-text">
-                        
-                        <!-- Copyright -->
-                        <div class="footer-copy font-alt">
-                            <a href="http://themeforest.net/user/theme-guru/portfolio" target="_blank">&copy; 2016</a>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="text-center text-uppercase"><strong>PROMOTION + DESIGN</strong><br/> DEVELOPMENT FOR YOUR BUSINESS &amp; BRAND</h2>
+                            <div class="text-center">
+                                <div class="promo-photo-block">
+                                    <div class="promo-photo-block-wrapper">
+                                        <div class="block-2"> <img src="tfx/graphicdesign/flow.png?v=1.0.0" alt="" width="200" height="150"> </div>
+                                        <div class="block-1"> <img src="tfx/graphicdesign/he1.png?v=1.0.0" alt="" width="171" height="171"> </div>
+                                        <div class="block0"> <img src="tfx/graphicdesign/controlla.png?v=1.0.0" alt="" width="200" height="200"> </div>
+                                        <div class="block1"> <img src="tfx/graphicdesign/ctc.png?v=1.0.0" alt="" width="171" height="171"> </div>
+                                        <div class="block2"> <img src="tfx/graphicdesign/gogrow.png?v=1.0.0" alt="" width="200" height="150"> </div>
+                                    </div>
+                                    <!-- .promo-photo-block-wrapper -->
+                                </div>
+                                <!-- .promo-photo-block -->
+                            </div>
+                            <p class="text-center">We are a group of individuals with over 25 combined years of experience in design and development.<br/>
+                            We thrive on challenging projects and love to develop intuitive strategies to help you reach your goals.</p>
                         </div>
-                        <!-- End Copyright -->
-                        
-                        <div class="footer-made">
-                            Designed by Tim &amp; Nate from City Ave Social
-                        </div>
-                        
+
+                       <div class="text-center"> 
+                       <a href="#contactus" class="btn btn-default fadeInUp wow scrollTo" data-wow-delay=".65s">CONTACT US</a> 
+                       <a href="portfolio.html" target="_blank" class="btn btn-primary fadeInUp wow" data-wow-delay=".75s">SEE DESIGNS</a> </div>
+
                     </div>
-                    <!-- End Footer Text --> 
+                </div>
+            </div>
+
+            <!-- END GRAPHIC DESIGN -->
+
+            <!-- END ABOUT US -->
+
+            <!-- ABOUS US / SECTION TAB -->
+            <div id="promotion" class="section-header" data-background="tfx/bg/phillyblue.jpg?v=1.0.0" data-overlay-color="#191919" data-overlay-opacity="0.95" style="background-image: url(http://template.brainwave.scientecraft.com/img/content/section-background/about-us-header.jpg?v=1.0.0); z-index: 0;">
+            <h2 class="text-uppercase">Promotion</h2> 
+            <div class="overlay" style="background-color: #191919; opacity: 0.95"></div></div>
+            <!-- END SECTION TABS -->
+
+
+            <div class="page-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 hidden-xs">
+                                <div class="layers mb-xs40 mt-sm80 mb-md0 mt-md0 mb-lg-50 mt-lg-50"> 
+                                    <img src="tfx/elements/iphonex3.png?v=1.0.0" alt="" class="layer fadeInLeft wow" data-wow-delay="0.6s" width="555" height="439" style="visibility: visible; animation-delay: 0.2s;"> 
+                                    <img src="tfx/elements/iphonex2.png?v=1.0.0" alt="" class="layer fadeInLeft wow" data-wow-delay="0.3s" width="555" height="439" style="visibility: visible; animation-delay: 0.1s;"> 
+                                    <img src="tfx/elements/iphonex.png?v=1.0.0" alt="" class="fadeInLeft wow" width="555" height="439" style="visibility: visible;"> </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h5 class="text-uppercase title-2 mb0 opacity-60">City Ave Social <strong>#Promo</strong></h5>
+                                <h2 class="text-uppercase mb30">Let's Get You Promoted</h2>
+                                <p class="mb40 opacity-70">Promote your project or event to hundreds of users on multiple platforms. Choose the best package that suits your promo needs.<br/>
+                                Scroll down to see pricing.</p> 
+                                <!-- <a href="#promotion" class="btn btn-primary scrollTo">See More</a> -->
+                                <a href="#contactus" class="btn btn-default scrollTo" id="promoprice">Contact Us</a> </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                         <div class="col-sm-12">
+                            <div class="text-center">
+                                <div class="pricing-item white style-1">
+                                    <div class="text-center">
+                                        <div class="price-box">
+                                            <div class="price"><strong>DAILY</strong></div>
+                                            <div class="per">Simple Promotion Package</div>
+                                        </div>
+                                    </div>
+                                    <div class="title"> <span>$5</span> </div>
+                                    <div class="text-center">
+                                        <ul class="list-unstyled">
+                                            <li>Your Event</li>
+                                            <li>posted for</li>
+                                            <li class="strong">1 Day</li>
+                                        </ul> 
+                                        <!-- Button -->
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="Z7XF2QX3QX64L">
+                                            <input type="submit" value="PayPal" name="submit" title="PayPal - The safer, easier way to pay online!" class="btn btn-primary">
+                                        </form>
+                                    </div>
+
+
+                                </div>
+                                <div class="pricing-item dark style-1">
+                                    <div class="text-center">
+                                        <div class="price-box">
+                                            <div class="price">WEEKLY</div>
+                                            <div class="per">Weekly Promotion Package</div>
+                                        </div>
+                                    </div>
+                                    <div class="title"> <span>$25</span> </div>
+                                    <div class="text-center">
+                                        <ul class="list-unstyled">
+                                           <ul class="list-unstyled">
+                                            <li>Your Event</li>
+                                            <li>posted for</li>
+                                            <li>5 Days</li>
+                                        </ul> 
+                                        <!-- Button -->
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="THRC2GZRPD5Y8">
+                                            <input type="submit" value="PayPal" name="submit" title="PayPal - The safer, easier way to pay online!" class="btn btn-primary">
+                                            </form>
+                                    </div>
+                                </div>
+                                <div class="pricing-item white style-1">
+                                    <div class="text-center">
+                                        <div class="price-box">
+                                            <div class="price"><strong>MONTHLY</strong></div>
+                                            <div class="per">Monthly Promotion Package</div>
+                                        </div>
+                                    </div>
+                                    <div class="title"> <span>$75</span> </div>
+                                    <div class="text-center">
+                                        <ul class="list-unstyled">
+                                            <li>Your Event</li>
+                                            <li>posted for</li>
+                                            <li class="strong">25 Days</li>
+                                        </ul> 
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="9R7SW6XCU2VB2">
+                                            <input type="submit" value="PayPal" name="submit" title="PayPal - The safer, easier way to pay online!" class="btn btn-primary">
+                                            </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABOUS US / SECTION TAB -->
+            <div id="contactus" class="section-header" data-background="tfx/bg/phillyblue.jpg?v=1.0.0" data-overlay-color="#191919" data-overlay-opacity="0.95" style="background-image: url(http://template.brainwave.scientecraft.com/img/content/section-background/about-us-header.jpg?v=1.0.0); z-index: 0;">
+            <h2 class="text-uppercase">Contact Us</h2> 
+            <div class="overlay" style="background-color: #191919; opacity: 0.95"></div></div>
+            <!-- END SECTION TABS -->
+
+
+            <!-- CONTACT FORM -->
+
+             <div class="page-section" data-background-color="#f4f4f4" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                           </div>
+                       
+
+<div class="container">
                     
-                 </div>
-                 
-                 
-                 <!-- Top Link -->
-                 <div class="local-scroll">
-                     <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
-                 </div>
-                 <!-- End Top Link -->
-                 
-            </footer>
-            <!-- End Foter -->
-        
-        
+                    <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+                        <form id="contact-form" class="row">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input name="name" class="form-control" id="exampleInputEmail1" placeholder="Name *"> </div>
+                                <div class="form-group">
+                                    <input name="email" type="email" class="form-control" id="exampleInputPassword1" placeholder="Email *"> </div>
+                                <div class="form-group hidden-xs">
+                                    <p class="help-block">All the fields are required !</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <textarea name="msg" class="form-control" placeholder="Message *"></textarea>
+                                </div>
+                                <input type="submit" value="Send Message" class="btn btn-primary pull-right"> </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                        </div>
+                        <div class="col-sm-12">
+                            <p class="text-center mt-xs10 mt-sm72 fadeInUp wow">Have a Question?<br/>
+                                Or Just Want To Talk About Getting Creative?
+                                <br>Contact Us Anytime.
+                                <br><h6 class="text-center opacity-30">Please allow up to 48 hours for a reply</h6></p>
+                        </div>
+                    </div>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            </div>
+            <!-- .page-section -->
         </div>
-        <!-- End Page Wrap -->
-        
-        
-        <!-- JS -->
-        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>        
-        <script type="text/javascript" src="js/SmoothScroll.js"></script>
-        <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
-        <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
-        <script type="text/javascript" src="js/jquery.viewport.mini.js"></script>
-        <script type="text/javascript" src="js/jquery.countTo.js"></script>
-        <script type="text/javascript" src="js/jquery.appear.js"></script>
-        <script type="text/javascript" src="js/jquery.sticky.js"></script>
-        <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
-        <script type="text/javascript" src="js/jquery.fitvids.js"></script>
-        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-        <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
-        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
-        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
-        <script type="text/javascript" src="js/gmap3.min.js"></script>
-        <script type="text/javascript" src="js/wow.min.js"></script>
-        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
-        <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
-        <script type="text/javascript" src="js/all.js"></script>
-        <script type="text/javascript" src="js/contact-form.js"></script>
-        <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script> 
-        <script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>        
-        <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
-        
+
+                <!-- END CONTACT FORM -->
+            
+
+
+
+        <div class="page-loader">
+            <div class="preloader loading"> <span class="slice"></span> <span class="slice"></span> <span class="slice"></span> <span class="slice"></span> <span class="slice"></span> <span class="slice"></span> </div>
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer class="site-footer display-h pos-relative">
+             </div>
+            <div class="copyright">
+                <div class="company text-center text-uppercase wow fadeInUp" data-wow-duration="3s" data-wow-delay="1s"><img src="tfx/logo/cityavesocialv.png" width="15%" height="15%" /></div>
+            </div>
+        </div>
+            <div class="copyright">
+                <div class="company text-center text-uppercase wow fadeIn" data-wow-delay="3s">&copy; 2018 | ALL RIGHTS RESERVED</div>
+                 <div class="text-center wow fadeInUp" data-wow-delay="2s">Designed with <i class="fa fa-heart"></i> from the City of Brotherly Love</div>
+            </div>
+            <!-- .copyright -->
+        </footer>
+        <!-- .site-footer -->
+        <a href="#" class="scroll-to-top"> <i class="fa fa-angle-up"></i> </a>
+        <!-- jQuery -->
+        <script src="js/jquery.min.js?v=1.11.2"></script>
+        <!-- jQuery UI -->
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <!-- Map library -->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true&amp;ver=v=3.exp&amp;signed_in=true"></script>
+        <!-- Zoom library -->
+        <script src="js/jquery.elevatezoom.js?v=1.0.0"></script>
+        <!-- Scroll library -->
+        <script src="js/wow.js?v=1.0.0"></script>
+        <script src="js/jquery.inview.js?v=1.0.0"></script>
+        <!-- OWL Carousel library -->
+        <script src="js/owl.carousel.js?v=2.0.0"></script>
+        <!-- OWL Carousel library -->
+        <script src="js/jquery.superslides.js?v=1.0.0"></script>
+        <!-- Magnific Popup library -->
+        <script src="js/jquery.magnific-popup.js?v=1.0.0"></script>
+        <!-- Isotope library -->
+        <script src="js/imagesloaded.pkgd.js?v=2.2.0"></script>
+        <!-- Isotope library -->
+        <script src="js/isotope.js?v=2.2.0"></script>
+        <!-- SmoothScroll library -->
+        <script src="js/SmoothScroll.js?v=1.4.0"></script>
+        <!-- Text rotator library -->
+        <script src="js/morphext.js?v=2.4.4"></script>
+        <!-- Video bg library -->
+        <script src="js/jquery.backgroundvideo.js?v=1.0.0"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.js?v=3.3.5"></script>
+        <!-- Pjax Library -->
+        <script src="js/jquery.pjax.js?v=1.0.0"></script>
+        <!-- Main script -->
+        <script src="js/script.js?v=1.0.0"></script>
     </body>
+
 </html>
