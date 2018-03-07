@@ -12,13 +12,13 @@
 
         <meta property="og:title" content="City Ave Social"/>
         <meta property="og:description" content="Promotion &amp; Web Design"/>
-        <meta property="og:image" content="http://www.cityavesocial.com/cityavesocialfb.jpg" />
-        <meta property="og:url" content="http://cityavesocial.com"/>
+        <meta property="og:image" content="https://www.cityavesocial.com/cityavesocialfb.jpg" />
+        <meta property="og:url" content="https://cityavesocial.com"/>
         <meta name="twitter:card" content="">
         <meta name="og:site_name" content="City Ave Social">
         <meta name="twitter:image:alt" content="Promotion &amp; Web Design">
 
-        <title>xDEMO - City Ave Social X</title>
+        <title>City Ave Social</title>
 
         <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
@@ -590,7 +590,7 @@
         </style>
 
         <!-- Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <!-- Bootstrap -->
         <link href="css/bootstrap.css?v3.3.5" rel="stylesheet" type="text/css" title="">
         <!-- Bootstrap -->
@@ -713,7 +713,7 @@
 
 
             <!-- ABOUS US / SECTION TAB -->
-            <div id="aboutus" class="section-header" data-background="tfx/bg/phillyblue.jpg?v=1.0.0" data-overlay-color="#191919" data-overlay-opacity="0.95" style="background-image: url(http://template.brainwave.scientecraft.com/img/content/section-background/about-us-header.jpg?v=1.0.0); z-index: 0;">
+            <div id="aboutus" class="section-header" data-background="tfx/bg/phillyblue.jpg?v=1.0.0" data-overlay-color="#191919" data-overlay-opacity="0.95" style="background-image: url(https://template.brainwave.scientecraft.com/img/content/section-background/about-us-header.jpg?v=1.0.0); z-index: 0;">
             <h2 class="text-uppercase">About Us</h2> 
             <div class="overlay" style="background-color: #191919; opacity: 0.95"></div></div>
             <!-- END SECTION TABS -->
@@ -756,7 +756,7 @@
             <!-- END ABOUT US -->
 
             <!-- ABOUS US / SECTION TAB -->
-            <div id="promotion" class="section-header" data-background="tfx/bg/phillyblue.jpg?v=1.0.0" data-overlay-color="#191919" data-overlay-opacity="0.95" style="background-image: url(http://template.brainwave.scientecraft.com/img/content/section-background/about-us-header.jpg?v=1.0.0); z-index: 0;">
+            <div id="promotion" class="section-header" data-background="tfx/bg/phillyblue.jpg?v=1.0.0" data-overlay-color="#191919" data-overlay-opacity="0.95" style="background-image: url(httsp://template.brainwave.scientecraft.com/img/content/section-background/about-us-header.jpg?v=1.0.0); z-index: 0;">
             <h2 class="text-uppercase">Promotion</h2> 
             <div class="overlay" style="background-color: #191919; opacity: 0.95"></div></div>
             <!-- END SECTION TABS -->
@@ -865,7 +865,7 @@
             </div>
 
             <!-- ABOUS US / SECTION TAB -->
-            <div id="contactus" class="section-header" data-background="tfx/bg/phillyblue.jpg?v=1.0.0" data-overlay-color="#191919" data-overlay-opacity="0.95" style="background-image: url(http://template.brainwave.scientecraft.com/img/content/section-background/about-us-header.jpg?v=1.0.0); z-index: 0;">
+            <div id="contactus" class="section-header" data-background="tfx/bg/phillyblue.jpg?v=1.0.0" data-overlay-color="#191919" data-overlay-opacity="0.95" style="background-image: url(https://template.brainwave.scientecraft.com/img/content/section-background/about-us-header.jpg?v=1.0.0); z-index: 0;">
             <h2 class="text-uppercase">Contact Us</h2> 
             <div class="overlay" style="background-color: #191919; opacity: 0.95"></div></div>
             <!-- END SECTION TABS -->
@@ -883,7 +883,7 @@
 <div class="container">
                     
                     <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
-                        <form id="contact-form" class="row">
+                        <form id="contact-form" class="row" method="post" action="https://casinternal.com/api/values" name="contact">
                             <div class="col-sm-6 col-md-6">
                                 <div class="form-group">
                                     <input name="name" class="form-control" id="exampleInputEmail1" placeholder="Name *"> </div>
@@ -895,9 +895,14 @@
                             </div>
                             <div class="col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <textarea name="msg" class="form-control" placeholder="Message *"></textarea>
+                                    <textarea name="message" class="form-control" placeholder="Message *"></textarea>
                                 </div>
+                                <input type="text" name="siteId" id="siteId" value="CAS" style="display:none;">
+									<input type="text" name="siteKey" class="textbox" id="response" value="" style="display:none;">
                                 <input type="submit" value="Send Message" class="btn btn-primary pull-right"> </div>
+                        </form>
+                        <form action="https://casinternal.com/api/values" name="tokenForm" method="post" id="tokenForm" style="display:none;">
+                            <input type="text" name="siteId" id="siteId" value="CAS">
                         </form>
                     </div>
                 </div>
@@ -981,6 +986,22 @@
         <script src="js/jquery.pjax.js?v=1.0.0"></script>
         <!-- Main script -->
         <script src="js/script.js?v=1.0.0"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#tokenForm').submit(function () { // catch the form's submit event
+                    $.ajax({ // create an AJAX call...
+                        data: $(this).serialize(), // get the form data
+                        type: $(this).attr('method'), // GET or POST
+                        url: $(this).attr('action'), // the file to call
+                        success: function (data) { // on success..
+                            $('#response').val(data); // update the DIV
+                        }
+                    });
+                    return false; // cancel original event to prevent form submitting
+                });
+                $('#tokenForm').submit();
+            });
+        </script>
     </body>
 
 </html>

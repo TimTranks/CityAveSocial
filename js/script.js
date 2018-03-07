@@ -147,47 +147,6 @@ $( document ).ready(function(){
 	 * Subscribe END
 	 -------------------------------------*/
 
-	/* ------------------------------------
-	 * Contact form START
-	 -------------------------------------*/
-	$( '#contact-form' ).submit(function() {
-		var $this = $(this);
-
-		if ( $this.hasClass( 'send' ) ) {
-			return false;
-		}
-
-		$this.addClass( 'send' );
-
-		$.ajax({
-			method: "POST",
-			url: "php/contact.php",
-			data: {
-				'name': $( '#contact-form input[name="name"]' ).val(),
-				'email': $( '#contact-form input[name="email"]' ).val(),
-				'msg': $( '#contact-form textarea[name="msg"]' ).val()
-			},
-			success: function(data) {
-
-				data = JSON.parse(data);
-
-				$( '.help-block', $this ).html(data.msg);
-
-				if ( data.status === 'success' ) {
-					$( '#contact-form input[name="name"]' ).val( '' );
-					$( '#contact-form input[name="email"]' ).val( '' );
-					$( '#contact-form textarea[name="msg"]' ).val( '' );
-				}
-
-				$this.removeClass( 'send' );
-			}
-		});
-
-		return false;
-	});
-	/* ------------------------------------
-	 * Contact form END
-	 -------------------------------------*/
 
 	/* ------------------------------------
 	 * Ajax load page START
